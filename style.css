@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Changa:wght@200&family=Gulzar&family=Ibarra+Real+Nova:wght@600&family=Kanit:wght@200;300&family=Kdam+Thmor+Pro&family=Orbitron:wght@400;600;900&family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,300;1,400&family=Titillium+Web:wght@200&display=swap");
+
+:root {
+  --black: #1f2632;
+  --card: #323a49;
+  --green: #52ffa8;
+}
+body {
+  background-color: var(--black);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#card {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--card);
+  padding: 0 20px 20px;
+  border-radius: 14px;
+  position: relative;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.card-header {
+  color: var(--green);
+}
+.card-body {
+  margin: 20px;
+  color: #fff;
+  width: 440px;
+  font-size: 24px;
+  padding: 0 0 100px;
+  position: relative;
+}
+.card-body::after {
+  content: url(./Images/pattern-divider-desktop.svg);
+  position: absolute;
+  bottom: 40px;
+  left: -2px;
+}
+
+.card-footer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: -2rem;
+}
+.card-footer:hover {
+  box-shadow: 0rem 0rem 1.4rem hsl(150, 100%, 66%);
+}
+
+@media (max-width: 575px) {
+  .card-body {
+    width: 340px;
+  }
+  .card-body::after {
+    content: url(./Images/pattern-divider-mobile.svg);
+    left: 1.5rem;
+  }
+}
